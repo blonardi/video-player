@@ -1,0 +1,65 @@
+@import './buttons.css';
+
+*{
+	box-sizing: border-box;
+}
+
+body{
+	background-color: #26B4BC;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper{
+	max-width: 900px;
+	background-color: #43DDE6;
+	margin: 0 auto;
+}
+
+.player{
+	position: relative;
+}
+
+.player video{
+	vertical-align: middle;
+	width: 100%;
+	border-radius: 4px;
+}
+
+.player-title{
+	color: white;
+	position: absolute;
+	top: 30px;
+	left: 30px;
+}
+
+.player-buttons{
+	position: absolute;
+	inset: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 2;
+	gap: 20px;
+}
+
+.player-progress{
+	position: absolute;
+	inset-block-end: 0;
+	width: 100%;
+	display: flex;
+	padding: 10px;
+}
+
+.player-progress input{
+	flex: 1;
+	z-index: 2;
+}
+
+.player-overlay{
+	inset: 0;
+	opacity: 0;
+}
+
+.player:hover .player-overlay{
+	opacity: 1;
+}
